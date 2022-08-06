@@ -1,0 +1,10 @@
+assignment 5 web 422
+
+App name: Web422-ASS5-music
+Client ID c24d0b10a9f840979b902a488bfeadef
+Client Secret 4474625999b643e5b4acf754ed6be698
+
+//comand to install types for the spotify data sets
+npm i @types/spotify-api --save-dev
+
+Open the "tsconfig.app.json" file and add the string: "spotify-api" to the "types" array within the "compilerOptions" property
