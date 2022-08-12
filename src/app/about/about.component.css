@@ -2,5 +2,11 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
+    width: 100%;
   }
+.ph{
+  text-align: justify;
+  color: rgb(255, 255, 255);
+  font-family: Verdana,Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}

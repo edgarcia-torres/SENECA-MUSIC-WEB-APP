@@ -1,12 +1,15 @@
 /**********************************************************************************************
- ** WEB422 – Assignment 5
+ ** WEB422 – Assignment 6
  * I declare that this assignment is my own work in accordance with Seneca Academic Policy. 
  * No part of this assignment has been copied manually or electronically from any other source
  * (including web sites) or distributed to other students. * 
  * 
- * Name: Edgar David Garcia Torres  Student ID: 104433206  Date: 22/07/2022
- * 
- * *******************************************************************************************/
+ * Name: Edgar David Garcia Torres  Student ID: 104433206  Date: 05/08/2022
+*
+* Angular App (Deployed) Link: https://imaginative-panda-ac45aa.netlify.app
+*
+* User API (Heroku) Link: https://arcane-fjord-43322.herokuapp.com/ 
+* *******************************************************************************************/
 
 import { Component, OnInit } from '@angular/core';
 import { MusicDataService } from '../music-data.service';
@@ -26,9 +29,10 @@ export class FavouritesComponentComponent implements OnInit {
   constructor(private data: MusicDataService) { }
 
   removeFromFavourites(deleteId: any){
-    console.log("remove from favorites")
-    this.deleteFavoriteSubscription = this.data.removeFromFavourites(deleteId).subscribe;
-    console.log(this.deleteFavoriteSubscription)
+    console.log("remove from favorites ID: "+deleteId)
+    this.deleteFavoriteSubscription = this.data.removeFromFavourites(deleteId).subscribe(data =>{
+      console.log("received from remove favorites at FAVORITES COMPONENT: "+ data);
+    })
     this.operation();
   }
  operation(){

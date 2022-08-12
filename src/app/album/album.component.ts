@@ -1,12 +1,15 @@
 /**********************************************************************************************
- ** WEB422 – Assignment 5
+ ** WEB422 – Assignment 6
  * I declare that this assignment is my own work in accordance with Seneca Academic Policy. 
  * No part of this assignment has been copied manually or electronically from any other source
  * (including web sites) or distributed to other students. * 
  * 
- * Name: Edgar David Garcia Torres  Student ID: 104433206  Date: 22/07/2022
- * 
- * *******************************************************************************************/
+ * Name: Edgar David Garcia Torres  Student ID: 104433206  Date: 05/08/2022
+*
+* Angular App (Deployed) Link: https://imaginative-panda-ac45aa.netlify.app
+*
+* User API (Heroku) Link: https://arcane-fjord-43322.herokuapp.com/ 
+* *******************************************************************************************/
 
 
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
@@ -31,7 +34,7 @@ export class AlbumComponent implements OnInit {
 
 
   clickFav = (trackId: any) => {
-    //this.favoriteSubscription = this.favorite.addToFavourites(trackId).subscribe({
+
    this.favorite.addToFavourites(trackId).subscribe({
       next: data => {
         this.favoriteSubscription = data;
@@ -42,22 +45,14 @@ export class AlbumComponent implements OnInit {
         this.snack.open(error.statusText,"" , { duration: 1500 });
         console.log("track Id: " + trackId + " not added to favorites list");
       }
-  });
-    // if(this.favoriteSubscription){
-    //   console.log("added Id: "+ trackId + "added")
-    //   this.snack.open("Adding to Favorites...", "Done", { duration: 1500 });
-
-    // }else{
-    //   this.snack.open("ERROR ADDING TO FAVORITES","" , { duration: 1500 });
-
-    //   console.log("track Id: " + trackId + " not added to favorites list");
-    // }
+    });
   }
 
 
   ngOnInit(): void {
     this.LiveMusicSubscription=this.data.getAlbumById(this.route.snapshot.params['id']).subscribe(data => this.album = data)
   }
+  
   ngOnDestroy(){
     this.LiveMusicSubscription.unsubscribe()
   }

@@ -23,9 +23,9 @@
     </button>
     <mat-menu  #userMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
 
-      <a mat-menu-item    >
+      <a mat-menu-item  (click)=logout() >
         <mat-icon>exit_to_app</mat-icon>
-        <span (click)=logout()>Log out</span>
+        <span >Log out</span>
       </a>
 
     </mat-menu>

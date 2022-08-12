@@ -22,7 +22,7 @@
         </form>
     </mat-card-content>
     <div *ngIf="success" class="success">Registration Successful. Proceed to<br /><br /> 
-        <a mat-raised-button color="accent" >
+        <a mat-raised-button color="accent" (click)=login()>
             <mat-icon>login</mat-icon>&nbsp;&nbsp;&nbsp;Login
         </a> 
     </div>
