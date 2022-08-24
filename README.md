@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
-#This project
+# This project
 
 This web page displays music information retrieved from Spotify using his API services.
 
