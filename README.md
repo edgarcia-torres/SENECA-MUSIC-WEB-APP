@@ -10,9 +10,9 @@ This App displays the most updated music information available on Spotify. The f
 
 This app also allows the user to create a list of favorite songs and display them in the favorites section. Information about user accounts like user names, passwords, and lists of favorite songs are stored in a Mongo database that is accessed through an API created by me. 
 
-The API to manage user information is deployed on Heroku:  https://arcane-fjord-43322.herokuapp.com/
+The API to manage user information is deployed on Cyclic:  https://difficult-lime-fawn.cyclic.app/
 
-This application is deployed on Netlify:  https://imaginative-panda-ac45aa.netlify.app
+This application is deployed on Netlify:  https://seneca-music-web-app.netlify.app
 
 ## Development server
 
