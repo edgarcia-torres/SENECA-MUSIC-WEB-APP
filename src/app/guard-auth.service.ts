@@ -11,13 +11,10 @@
 * User API (Heroku) Link: https://arcane-fjord-43322.herokuapp.com/ 
 * *******************************************************************************************/
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router, CanActivate } from '@angular/router';
 import { AuthService } from './auth.service';
-
-
-
 
 
 @Injectable({

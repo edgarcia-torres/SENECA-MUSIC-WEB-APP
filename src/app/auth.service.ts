@@ -24,25 +24,25 @@ import RegisterUser from './RegisterUser';
   providedIn: 'root'
 })
 export class AuthService {
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   public getToken(): string | null { ////This method simply pulls the item "access_token" from "localStorage" and returns it.
     return localStorage.getItem('access_token');
   }
 
-  public setToken(token: string): void{
+  public setToken(token: string): void {
     localStorage.setItem('access_token', token);
   }
 
   public readToken(): User | null {
     const token = localStorage.getItem('access_token');
     console.log("inside read token")
-    
+
     if (token) {
 
 
-      console.log("original token: "+ token)
-      console.log("decoded token : "+jwt_decode(token) )
+      console.log("original token: " + token)
+      console.log("decoded token : " + jwt_decode(token))
 
 
       return jwt_decode(token);
@@ -69,12 +69,13 @@ export class AuthService {
 
   login(user: User): Observable<any> {//take the user parameter > attempt to "log in"
     // Attempt to login sending the user data via a POST request to environment.userAPIBase/login using the HttpClient service (http).
+    console.log("user is : " + JSON.stringify(user))
     environment.userAPIBase
     return this.http.post<any>(environment.userAPIBase + `api/user/login`, user);//return type Observable<any> ==> value from the http.post method call
   }
 
 
-  logout(){// remove "access_token" from "localStorage"
+  logout() {// remove "access_token" from "localStorage"
     localStorage.removeItem('access_token');
   }
 
@@ -82,7 +83,7 @@ export class AuthService {
     //This method will take the registerUser parameter (type: registerUser) and attempt to "register" using the User API. This is done by 
     //sending the registerUser data via a POST request to environment.userAPIBase/register using the HttpClient service (http).
     // The return value for this method is the return value from the http.post method call (ie: the Observable)
-    return this.http.post<any>(environment.userAPIBase+`api/user/register`,registerUser);
+    return this.http.post<any>(environment.userAPIBase + `api/user/register`, registerUser);
   }
 
 }
