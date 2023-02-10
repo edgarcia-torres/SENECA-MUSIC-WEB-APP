@@ -1,6 +1,18 @@
-# Web422A4
+# Seneca Music
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+
+# This project
+
+This web page displays music information retrieved from Spotify using his API services.
+
+This App displays the most updated music information available on Spotify. The first page is a list of recent album releases available. This page offers the possibility to search music by the artist's name. Access the search bar in the unfoldable navigation bar, the app will display a list of artists matching the word entered. Some themes offer short audio that can be listened to. 
+
+This app also allows the user to create a list of favorite songs and display them in the favorites section. Information about user accounts like user names, passwords, and lists of favorite songs are stored in a Mongo database that is accessed through an API created by me. 
+
+The API to manage user information is deployed on Heroku:  https://arcane-fjord-43322.herokuapp.com/
+
+This application is deployed on Netlify:  https://imaginative-panda-ac45aa.netlify.app
 
 ## Development server
 
